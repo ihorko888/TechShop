@@ -1,0 +1,207 @@
+.product {
+    padding-bottom: 100px;
+    background-color: $colorBg;
+    
+    &-slider {
+        margin-top: 20px;
+        .fotorama__nav-wrap {
+            margin-top: 20px;
+        }
+        .fotorama__thumb-border {
+            border-style: none;
+            background-image: none;
+            border-color: none;
+        }
+        .fotorama__nav--thumbs .fotorama__nav__frame {
+            margin-right: 10px;
+        }
+    }
+    .container {
+        padding-top: 30px;
+        border-top: 3px solid #555555;
+    }
+    p {
+        margin-bottom: 20px;
+        span {
+            &::after {
+                content: '/';
+                display: inline-block;
+                padding: 0 10px;
+                color: #d3d3d3;
+            }
+        }
+    }
+    h2 {
+        margin-bottom: 80px;
+        font-family: "PF Din Text Comp Pro";
+        font-size: 36px;
+        font-weight: 400;
+        line-height: 20px;
+        /* Text style for "Apple iPho" */
+        letter-spacing: 1.8px;
+        margin-bottom: 15px;
+    }
+
+    &-about {
+        margin-top: 20px;
+        &-rating {
+            margin-bottom: 20px;
+            color: $colorBlue;
+            small {
+                color: #999999;
+            }
+            span {
+                margin-left: 80px;
+                color: #62b14f;
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 14px;
+                font-weight: 600;
+            }
+        }
+        p {
+            margin-bottom: 20px;
+            color: #333333;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 13px;
+            font-weight: 400;
+            line-height: 18px;
+        }
+
+        &-sizing {
+            display: flex;
+            .sise-left {
+                margin-right: 25px;
+                width: 25%;
+            }
+            .size-right {
+                width: 75%;
+                // border: 1px solid red;
+            }
+            .product-about-size {
+                .product-price {
+                    display: block;
+                    margin-top: 70px;
+                    font-family: "PF Din Text Comp Pro";
+                    font-size: 30px;
+                    font-weight: 500;
+                    line-height: 14px;
+                }
+                span {
+                    display: block;
+                    margin-bottom: 10px;
+                }
+                // width: 50%;
+                &-select, .product-about-size-color{
+                    display: flex;
+                    ul { 
+                        // display: flex;
+                        li {
+                        display: flex;
+                        padding: 10px;
+                        background-color: #fff;
+                        cursor: pointer;
+                        i {
+                            margin-left: 5px;
+                        }
+                        }
+                    }
+                    // display: inline-block;
+                    li:hover > ul {
+                        display: block;
+                    }
+                    li ul {
+                        display: none;
+                        position: absolute;
+                        padding-top: 30px;
+                        margin-left: -11px;
+                    }
+                    li > ul li {
+                        border: 1px solid $colorBg;
+                        padding: 10px 25px 10px 10px;
+                        background-color: #fff;
+                        &:hover {
+                            color: $colorBlue;
+                        }
+                    }
+                }
+                &-color {
+                    // display: inline-flex;
+                    ul {
+                        width: 100%;
+                        li {
+                            ul {
+                                width: 67%;
+                            }
+                        }
+                    }
+                }
+                button {
+                    display: block;
+                    padding: 18px 0;
+                    margin-top: 50px;
+                    width: 100%;
+                    border: none;
+                    outline: none;
+                    color: $colorWhite;
+                    background-color: $colorBlue;
+                    text-transform: uppercase;
+                    transition: 0.2s;
+                    cursor: pointer;
+                    &:hover {
+                        background-color: darken($colorBlue, 5%);
+                    }
+                }
+
+            }
+        }
+    }
+
+    &-right {
+        &-sidebar {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            .product-box {
+                // vertical-align: middle;
+                margin-bottom: 5px;
+                padding-left: 15px;
+                padding-top: 15px;
+                padding-right: 15px;
+                padding-bottom: 15px;
+                background-color: $colorWhite;
+                h5 {
+                    margin-bottom: 10px;
+                    font-family: "PF Din Text Comp Pro";
+                    font-size: 24px;
+                    font-weight: 600;
+                    text-transform: uppercase;
+                    i {
+                        margin-right: 10px;
+                        color: $colorBlue;
+                    }
+                }
+                p {
+                    color: #555555;
+                    font-family: Arial, Helvetica, sans-serif;
+                    font-size: 12px;
+                    font-weight: 400;
+                    line-height: 16px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 992px) {
+    .product-right-sidebar {
+        flex-direction: row;
+        .product-box {
+            flex-basis: 30%;
+        }
+    }
+}
+
+.d-none {
+    display: none;
+}

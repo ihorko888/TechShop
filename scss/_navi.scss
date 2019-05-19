@@ -1,0 +1,195 @@
+.navi {
+    &-block {
+        padding-top: 18px;
+        .container {
+            height: 100%;
+            .row {
+                height: 100%;
+                .navi-block-tel {
+                    display: flex;
+                    align-items: center;
+                    color: $colorBlack;
+                    font-size: 24px;
+                    font-weight: 400;
+                    line-height: 24px;
+                    font-family: "PF Din Text Comp Pro";
+                    i {
+                        color: $colorBlue;
+                        transform: rotate(100deg);
+                        font-size: 16px;
+                        margin-right: 10px;
+                    }
+                }
+            }
+        }
+
+        &-form {
+            display: flex;
+            align-items: center;
+            position: relative;
+            width: 100%;
+    
+            span {
+                position: absolute;
+                left: 10px;
+                a {
+                    i {
+                        color: $colorBlue;
+                        transform: rotate(90deg);
+                    }
+                }
+            }
+    
+            input {
+                width: 100%;
+                height: 31px;
+                padding-left: 32px;
+                border: 1px solid #cdcdcd;
+                outline: none;
+            }
+        }
+
+        &-menu {
+            margin-top: 15px;
+            .row {
+                ul {
+                    display: flex;
+                    justify-content: space-between;
+                    position: relative;
+                    ul {
+                        display: none;
+                        position: absolute;
+                        padding-top: 20px;
+                        background-color: $colorWhite;
+                        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.25);
+                        min-width: 100px;
+                        z-index: 9999;
+                        li {
+                            display: block;
+                            &:hover {
+                                // color: $colorBlue;
+                            }
+                        }
+                    }
+                    li {
+                        margin-bottom: 20px;
+                        font-size: 20px;
+                        font-weight: 600;
+                        line-height: 24px;
+                        text-transform: uppercase;
+                        font-family: "PF Din Text Comp Pro";
+                        transition: all .2s;
+                        cursor: pointer;
+                        &:hover {
+                            color: $colorBlue;
+                        }
+                        &:hover ul {
+                            display: block;
+                        }
+                        &:hover ul li {
+                            color: $colorBlue;
+                        }
+                    }
+                }
+            }
+        }
+
+        &-line {
+            height: 3px;
+            background-color: $colorBlack;
+        }
+    }
+
+}
+
+@media (max-width: 1200px) {
+    .navi {
+        &-block {
+            .container {
+                .row {
+                    .navi-block-tel {
+                        font-size: 22px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 992px) {
+    .navi-block-logo {
+        margin-top: -22px;
+        .col-lg-2 {
+            padding-left: 0;
+        }
+    }
+
+    .navi-block-menu {
+        .row {
+            ul {
+                li {
+                    margin-bottom: 10px;
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .navi-block-form {
+        margin-top: 10px;
+    }
+}
+
+@media (max-width: 576px) {
+    .navi {
+        &-block {
+            &-logo {
+                margin-top: -62px;
+                margin-bottom: 50px;
+                img {
+                    width: 110px;
+
+                }
+            }
+
+            .container {
+                .row {
+                    .navi-block-tel {
+                        font-size: 18px;
+                    }
+                }
+            }
+
+            &-menu {
+                // display: none;
+                .row {
+                    ul {
+                        display: none;
+                    }
+                }
+                &-btn {
+                    display: block;
+                    height: 35px;
+                    width: 100%;
+                    font-weight: 600;
+                    letter-spacing: 3px;
+                    background-color: $colorBlue;
+                    color: $colorWhite;
+                    text-align: center;
+                    text-transform: uppercase;
+                    &::before {
+                        content: 'CATALOG';
+                        display: block;
+                        line-height: 35px;
+                    }
+                }
+            }
+
+            &-line {
+                display: none;
+            }
+        }
+    }
+}

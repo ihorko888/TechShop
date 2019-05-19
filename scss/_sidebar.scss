@@ -1,0 +1,111 @@
+.smartphones {
+    .sidebar-checkboxes {
+        padding-top: 15px;
+        color: $colorBlack;
+        font-family: "PF Din Text Comp Pro";
+        font-size: 16px;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 1.6px;
+        li {
+            color: #333333;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 12px;
+            line-height: 24px;
+            letter-spacing: normal;
+            text-transform: capitalize;
+            &:first-child {
+                margin-top: 10px;
+            }
+            span {
+                color: #888888;
+            }
+            input[type="checkbox"] {
+                display: none;
+                color: $colorBlue;
+                &:checked + label::before {
+                    content: '\f00c';
+                    display: inline-flex;
+                    align-items: center;
+                    font-size: 13px;
+                    color: $colorBlue;
+                    font-weight: 900;
+                    font-family: 'Font Awesome 5 Free', 'Font Awesome 5 Brands';
+                }
+            }
+            label {
+                &::before {
+                    content: '';
+                    display: inline-block;
+                    color: $colorBlue;
+                    width: 15px;
+                    height: 15px;
+                    border: 1px solid #000000;
+                    vertical-align: middle;
+                    margin-right: 10px;
+                    transition: 0.1s;
+                }
+            }
+        }
+    }
+}
+.sidebar {
+    position: relative;
+}
+.filter {
+    display: none;
+    position: absolute;
+    right: 30px;
+    top: 150px;
+    color: $colorBlue;
+    cursor: pointer;
+    z-index: 11111;
+}
+
+@media (max-width: 768px) {
+    .smartphones {
+        .sidebar-checkboxes {
+            font-size: 14px;
+            li {
+                font-size: 10px;
+            }
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    .sidebar {
+        display: none;
+        z-index: 1111;
+        position: relative;
+        // left: -100vw;
+
+    }
+    .filter {
+        display: block;
+    }
+    .filter-close {
+        display: block;
+    }
+}
+
+.filter-link {
+    display: block;
+}
+.filter-close {
+    display: none;
+    position: absolute;
+    z-index: 22222;
+    right: 30px;
+    top: 20px;
+    color: $colorBlue;
+}
+
+
+.d-none {
+    display: none;
+}
+
+.d-block {
+    display: block;
+}
